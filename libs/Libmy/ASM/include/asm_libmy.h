@@ -29,6 +29,12 @@ int             asm_strcmp(char *s1, char *s2);
 int             asm_strncmp(char *s1, char *s2, size_t num);
 void            asm_putnbr(int nbr, char base, BOOL is_unsigned);
 int             asm_nbrlen(int nbr, char base, BOOL is_unsigned);
+char            *asm_itoa(int nbr, char *buf, char base);
+char            *asm_utoa(unsigned int nbr, char *buf, char base);
+char            asm_toupper(char c);
+char            asm_tolower(char c);
+char            *asm_strtoupper(char *str, char *buf);
+char            *asm_strtolower(char *str, char *buf);
 
 #endif
 

@@ -16,6 +16,12 @@
 ✔ asm_putnbr
 ✔ asm_nbrlen
 ✔ asm_strncmp
+✔ asm_itoa
+✔ asm_utoa
+✔ asm_toupper
+✔ asm_tolower
+✔ asm_strtoupper
+✔ asm_strtolower
 
 ✘ asm_getnbr
 ✘ asm_strstr

@@ -97,9 +97,15 @@ uint            f_u_hex_int_low(va_list *vl)
 uint            f_u_hex_int_upp(va_list *vl)
 {
     int         tmp;
+    int         len;
+    char        *buf;
 
     tmp = va_arg(*vl, int);
-    asm_putnbr(tmp, 16, true);
-    return asm_nbrlen(tmp, 16, true);
+    len = asm_nbrlen(tmp, 16, true);
+    if (!(buf = (char*)malloc(len + 1)))
+        return 0;
+    asm_putstr(asm_strtoupper(asm_itoa(tmp, buf, 16), buf));
+    free(buf);
+    return len;
 }
 

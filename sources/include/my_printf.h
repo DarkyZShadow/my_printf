@@ -2,6 +2,7 @@
 #define __MY_PRINTF_H__
 #include "asm_libmy.h"
 #include <stdarg.h>
+#include <stdlib.h>
 
 
 /* Typedef */

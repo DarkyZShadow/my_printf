@@ -13,7 +13,14 @@ SRC				=	src/asm_strchr.asm			\
 					src/asm_strcmp.asm			\
 					src/asm_strncmp.asm         \
                     src/asm_putnbr.asm          \
-                    src/asm_nbrlen.asm
+                    src/asm_nbrlen.asm          \
+                    src/asm_itoa.asm            \
+                    src/asm_utoa.asm            \
+                    src/asm_tolower.asm         \
+                    src/asm_toupper.asm         \
+                    src/asm_strtolower.asm      \
+                    src/asm_strtoupper.asm
+
 OBJ				=	$(SRC:.asm=.o)
 FLAGS			=	-f elf64 -g
 RM				=	rm -rf
