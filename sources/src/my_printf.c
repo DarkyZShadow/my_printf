@@ -36,22 +36,32 @@ void            *get_func_from_flag(char c)
     return NULL;
 }
 
+
 uint            f_s_dec_int(va_list *vl)
 {
-    asm_putnbr(va_arg(*vl, int), 10, false);
-    return 2;
+    int         tmp;
+
+    tmp = va_arg(*vl, int);
+    asm_putnbr(tmp, 10, false);
+    return asm_nbrlen(tmp, 10, false);
 }
 
 uint            f_u_dec_int(va_list *vl)
 {
-    asm_putnbr(va_arg(*vl, int), 10, true);
-    return 2;
+    int         tmp;
+
+    tmp = va_arg(*vl, int);
+    asm_putnbr(tmp, 10, true);
+    return asm_nbrlen(tmp, 10, true);
 }
 
 uint            f_u_oct(va_list *vl)
 {
-    asm_putnbr(va_arg(*vl, int), 8, true);
-    return 2;
+    int         tmp;
+
+    tmp = va_arg(*vl, int);
+    asm_putnbr(tmp, 8, true);
+    return asm_nbrlen(tmp, 8, true);
 }
 
 uint            f_string(va_list *vl)
@@ -75,15 +85,21 @@ uint            f_character(va_list *vl)
     return 1;
 }
 
-uint                    f_u_hex_int_low(va_list *vl)
+uint            f_u_hex_int_low(va_list *vl)
 {
-    asm_putnbr(va_arg(*vl, int), 16, false);
-    return 2;
+    int         tmp;
+
+    tmp = va_arg(*vl, int);
+    asm_putnbr(tmp, 16, true);
+    return asm_nbrlen(tmp, 16, true);
 }
 
-uint                    f_u_hex_int_upp(va_list *vl)
+uint            f_u_hex_int_upp(va_list *vl)
 {
-    asm_putnbr(va_arg(*vl, int), 16, false);
-    return 2;
+    int         tmp;
+
+    tmp = va_arg(*vl, int);
+    asm_putnbr(tmp, 16, true);
+    return asm_nbrlen(tmp, 16, true);
 }
 
