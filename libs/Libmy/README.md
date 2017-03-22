@@ -14,13 +14,12 @@
 ✔ asm_strncat
 ✔ asm_strcmp
 ✔ asm_putnbr
+✔ asm_nbrlen
 ✔ asm_strncmp
 
 ✘ asm_getnbr
 ✘ asm_strstr
 ✘ asm_strdup
-✘ asm_uppercase
-✘ asm_lowercase
 ✘ asm_str_to_wordtab
 ```
 
