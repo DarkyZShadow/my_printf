@@ -38,19 +38,19 @@ void            *get_func_from_flag(char c)
 
 uint            f_s_dec_int(va_list *vl)
 {
-    asm_putint(va_arg(*vl, int));
+    asm_putnbr(va_arg(*vl, int), 10, false);
     return 2;
 }
 
 uint            f_u_dec_int(va_list *vl)
 {
-    asm_putuint(va_arg(*vl, int));
+    asm_putnbr(va_arg(*vl, int), 10, true);
     return 2;
 }
 
 uint            f_u_oct(va_list *vl)
 {
-    asm_putoct(va_arg(*vl, int));
+    asm_putnbr(va_arg(*vl, int), 8, true);
     return 2;
 }
 
@@ -73,5 +73,17 @@ uint            f_character(va_list *vl)
 {
     asm_putchar((char)va_arg(*vl, int));
     return 1;
+}
+
+uint                    f_u_hex_int_low(va_list *vl)
+{
+    asm_putnbr(va_arg(*vl, int), 16, false);
+    return 2;
+}
+
+uint                    f_u_hex_int_upp(va_list *vl)
+{
+    asm_putnbr(va_arg(*vl, int), 16, false);
+    return 2;
 }
 
