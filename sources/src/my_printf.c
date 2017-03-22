@@ -38,7 +38,19 @@ void            *get_func_from_flag(char c)
 
 uint            f_s_dec_int(va_list *vl)
 {
-    asm_putnbr(va_arg(*vl, int));
+    asm_putint(va_arg(*vl, int));
+    return 2;
+}
+
+uint            f_u_dec_int(va_list *vl)
+{
+    asm_putuint(va_arg(*vl, int));
+    return 2;
+}
+
+uint            f_u_oct(va_list *vl)
+{
+    asm_putoct(va_arg(*vl, int));
     return 2;
 }
 
