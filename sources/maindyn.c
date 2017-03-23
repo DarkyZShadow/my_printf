@@ -1,11 +1,19 @@
-#include "my_printf.h"
-#include <string.h>
 #include <stdio.h>
+#include <dlfcn.h>
+
+int my_printf(char *format, ...);
 
 int                 main(int ac, char **av)
 {
-    int res = 0;
+    int             res;
+//    void            *handle;
+//    int             (*my_printf)(char *str, ...);
 
+//    if (!(handle = dlopen("./libmy_printf_x86_64-Linux.so", RTLD_LAZY | RTLD_GLOBAL | RTLD_NOW)))
+//        return 1;
+//    my_printf = dlsym(handle, "my_printf");
+
+    res = 0;
     res = my_printf("1 - une chaine\n");
     my_printf("%d\n", res);
     res = my_printf("2 - %s\n", "une autre chaine");

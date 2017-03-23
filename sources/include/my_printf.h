@@ -11,7 +11,7 @@ typedef uint            (*t_func)(va_list *);
 
 /* Functions */
 int                     my_printf(char *format, ...);
-void                    *get_func_from_flag(char c);
+t_func                  get_func_from_flag(char c);
 uint                    f_s_dec_int(va_list *vl);
 uint                    f_string(va_list *vl);
 uint                    f_percent(va_list *vl);

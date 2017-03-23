@@ -20,7 +20,6 @@ SRC				=	src/asm_strchr.asm			\
                     src/asm_toupper.asm         \
                     src/asm_strtolower.asm      \
                     src/asm_strtoupper.asm
-
 OBJ				=	$(SRC:.asm=.o)
 FLAGS			=	-f elf64 -g
 RM				=	rm -rf

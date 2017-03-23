@@ -2,7 +2,7 @@
 
 int             my_printf(char *format, ...)
 {
-    int         i;
+    size_t      i;
     int         count;
     t_func      func;
     va_list     vl;
@@ -26,7 +26,7 @@ int             my_printf(char *format, ...)
     return count;
 }
 
-void            *get_func_from_flag(char c)
+t_func          get_func_from_flag(char c)
 {
     size_t      i;
 
@@ -75,6 +75,7 @@ uint            f_string(va_list *vl)
 
 uint            f_percent(va_list *vl)
 {
+    (void)vl;
     asm_putchar('%');
     return 1;
 }
