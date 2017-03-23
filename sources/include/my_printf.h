@@ -20,6 +20,7 @@ uint                    f_u_dec_int(va_list *vl);
 uint                    f_u_oct(va_list *vl);
 uint                    f_u_hex_int_low(va_list *vl);
 uint                    f_u_hex_int_upp(va_list *vl);
+uint                    f_pointer(va_list *vl);
 
 /* Globals vars */
 static const char       printf_flags[20] =
@@ -64,7 +65,7 @@ static const            t_func printf_funcs[20] =
     NULL, /*f_hex_float_upp,*/
     f_character,
     f_string,
-    NULL, /*f_pointer,*/
+    f_pointer,
     NULL, /*f_nothing,*/
     f_percent,
     NULL
